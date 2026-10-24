@@ -1,0 +1,3 @@
+refs/
+*.local.*
+__pycache__/

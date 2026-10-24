@@ -1,0 +1,11 @@
+PIXEL ART SPEC (hard rules, machine-checked by pixelkit). light direction, view, size: from the brief.
+- 1 pixel = 1 grid cell; flat colors only; alpha 0 or 255; no AA, blur, gradients, glow, noise/grain
+- limited palette (<= 26 colors); no near-identical stray shades
+- every material shaded with >= 3 shades from ONE ramp, stepping 1 shade at a time
+- lit-side ramp steps clearly distinct (>= 4 L*); never dark next to light of same ramp
+- closed 1px outline of dark tinted near-blacks (L* <= 22.23), tint toward the local color; never 2px thick
+- transparent background; no drop shadow baked in; no detached specks or 1px holes
+- example ramp from refs (dark->light): #000000 #303e49 #5e6b76
+- example ramp from refs (dark->light): #090000 #2b1302 #4e040f #733b1e #91612d #cc934b #efca7b #d6f2a4
+- example ramp from refs (dark->light): #000007 #1c091c #350a21 #571224 #831030 #ab1a3c #c91c5c #c259be
+- dither: sparse checker only
